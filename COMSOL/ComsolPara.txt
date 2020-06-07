@@ -1,0 +1,25 @@
+Comsol Tapered Fibre Simulation
+
+The simulation requires the Wave Optics module with the Comsol multiphysics package.  It uses the Beam Envelope method to find the transmission of individual modes through the tapered fibre structure.  The Parameters for the simulation as as follows:
+
+lda0 	.65[um] 	Wavelength
+f0 	c_const/lda0 	Frequency
+nClad 	1.4571 		"Refractive index, cladding"
+nCore 	1.4708 		"Refractive index, core"
+aCore 	25[um] 		"Core radius"
+aClad 	62.5[um] 	"Cladding radius"
+zLength 50000[um] 	"Taper length"
+Taper 	0.20		"Taper ratio (eg 1/4)"
+Runout 	10000[um] 	"Runout length"		[not used]
+nClad2 	1.45366 	"Runout clad index"			
+nCore2 	1.4571 		"Runout core index"
+alpha 	.009		"index coefficient"
+tanthe 	aCore/zLength*(1-Taper) 	"Tan theta"
+
+The parabolic refractive index profile is calculated as:
+
+n(r)=nCore*(1- alpha*(r/aCore)^2)
+
+The step index profile is with alpha=0
+
+Perfectly Matched Boundary Conditions are used keep the mesh sizes to a minimum.
