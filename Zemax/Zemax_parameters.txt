@@ -1,0 +1,56 @@
+Zemax Tapered Fibre Simulation
+
+The simulation requires the non-sequential mode of Zemax. It uses the Beam ray tracing analysis to find the transmission of the tapered fibre structure.  
+
+The wavelength can be defined in System Explorer: wavelength = 0.635, weigth = 1.0
+
+
+The Parameters for the simulation can be defined in Non-sequential component Editor as follows:
+
+	1. Effective Numerical aperture can be defined by the Source parameters.
+		Source Two Angle:
+ 	#Analysis Rays: number of ray analysis 
+ 	Power(Watt): Source power in Watt
+ 	X-Half Width: radius of input beam in x axis
+ 	Y-Half Width: radius of input beam in y axis
+		*X-Half Width and Y-Half Width need be defined the same value for symmetry beam input.
+
+	2. Cladding parameters:
+		Object type: Cylinder volume
+	Front R: radius of an input fibre cladding surface
+	Z length: length of cladding
+	Back R: radius of an output fibre cladding surface
+
+   - 5:1 taper, Front R= 0.625, Back R= 0.125, Z length = 1000
+   - 4:1 taper, Front R= 0.625, Back R= 0.15625, Z length = 1000
+
+	3. Core parameters:
+ 	Object type: Cylinder volume
+ 	Front R: radius of an input fibre core surface
+ 	Z length: length of cladding
+ 	Back R: radius of an output fibre core surface
+
+   - 5:1 taper, Front R= 0.625, Back R= 0.125, Z length = 1000
+   - 4:1 taper, Front R= 0.25, Back R= 0.05, Z length = 1000
+ 
+
+To define specific refractive index (n), the Gradient 1 surface is applied to the core and cladding surface.
+The Gradient profile can be defined by selecting on 'Object properties' then select 'Index'. Choose 'GRIN' 
+	
+	Gradient 1 refractive profile: n (r) = N0 + Nr2*r^2* Nr1* r
+
+The step index profile is with Nr2=0 in both core and cladding.
+	step-index fibre core profile parameters 
+		Nr2 = 0
+		N0 = 1
+
+	step-index fibre cladding profile parameter
+		Nr2 = 0
+		N0 = 1
+
+The graded-index is with Nr2 = -0.219 in core and 0 in cladding.
+	graded-index fibre core parameters 
+		Nr2 = -0.219
+		N0 = 1.4708
+
+
