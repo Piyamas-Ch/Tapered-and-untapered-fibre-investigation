@@ -1,0 +1,7 @@
+The Zemax simulation parameter can be found in 'Zemax_parameters.txt'.
+
+The Zemax user's interface screenshot can be found in 'zemax-screenshot.jpeg'. All description of the interface can be found in Zemax_parameters.txt'. The screenshot showed the main display for parameter adjustment: 3D layout, Detector and Data Editor.
+
+The step-index tapered fibre model file name is si5to1_taper_down201119 which is available in both .zmx and .zda
+
+The graded-index tapered fibre model file name is 50_gi5to1_taper_down_grin_20052020 which is available in both .zmx and .zda
