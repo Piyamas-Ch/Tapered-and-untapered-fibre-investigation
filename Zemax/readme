@@ -1,3 +1,5 @@
+##Zemax simulation parameter
+
 The Zemax simulation parameter can be found in 'Zemax_parameters.txt'.
 
 The Zemax user's interface screenshot can be found in 'zemax-screenshot.jpeg'. All description of the interface can be found in Zemax_parameters.txt'. The screenshot showed the main display for parameter adjustment: 3D layout, Detector and Data Editor.
