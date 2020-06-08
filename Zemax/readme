@@ -5,3 +5,12 @@ The Zemax user's interface screenshot can be found in 'zemax-screenshot.jpeg'. A
 The step-index tapered fibre model file name is si5to1_taper_down201119 which is available in both .zmx and .zda
 
 The graded-index tapered fibre model file name is 50_gi5to1_taper_down_grin_20052020 which is available in both .zmx and .zda
+
+ZMX vs ZDA file
+
+ZMX (large file)
+"Files used to store lens data. The ZMX file is a text file which contains the complete description of the lens, including apertures, wavelengths, prescription data, and the merit function." (Zemax, 2019)
+
+ZDA
+
+"These files are the OpticStudio “session” files, which define the display configuration and open windows and settings for each saved ZMX lens file." (Zemax, 2019)
