@@ -1,5 +1,12 @@
-2. COMSOL simulation
+#2. The COMSOL simulation 
+
+The COMSOL user's interface screenshot can be found in 'Comsol_UI.jpg'.
+
+The 2D simulation of tapered fibre can be defined the parameters by following the 'ComsolPara.txt'.
 
 The COMSOL file of tapered fibre file is'2DTaperFinal.mph'. 
- The 2D simulation of tapered fibre can be defined the parameters by following the 'ComsolPara.txt'.
- The screenshot of an user's interface is 'Comsol_UI.jpg'.
+ 
+
+
+
+
