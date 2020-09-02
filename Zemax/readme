@@ -8,6 +8,10 @@ The step-index tapered fibre model file name is si5to1_taper_down201119 which is
 
 The graded-index tapered fibre model file name is 50_gi5to1_taper_down_grin_20052020 which is available in both .zmx and .zda
 
+The fibre test setup model file name is paraxial_fibre_setup which is available in both .zmx and .zda
+**Note that the fibre test setup model are simulated with the ideal scenario (paraxial lenses setup calculations) due to the proprietary product information.
+
+
 ZMX vs ZDA file
 
 ZMX (large file)
