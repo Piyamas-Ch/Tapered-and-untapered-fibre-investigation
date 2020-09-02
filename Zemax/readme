@@ -10,6 +10,7 @@ The graded-index tapered fibre model file name is 50_gi5to1_taper_down_grin_2005
 
 The fibre test setup model file name is paraxial_fibre_setup which is available in both .zmx and .zda
 **Note that the fibre test setup model are simulated with the ideal scenario (paraxial lenses setup calculations) due to the proprietary product information.
+***The Gaussian spot diameter calculations from the setup can be found in Gaussian-spot_calculations.JPG.
 
 
 ZMX vs ZDA file
