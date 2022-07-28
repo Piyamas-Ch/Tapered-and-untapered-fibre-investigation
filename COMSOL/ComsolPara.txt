@@ -1,32 +1,36 @@
 Comsol Tapered Fibre Simulation
 
-The simulation requires the Wave Optics module with the Comsol multiphysics package.  It uses the Beam Envelope method to find the transmission of individual modes through the tapered fibre structure.  The Parameters for the simulation as as follows:
+The 3d simulation requires the Wave Optics module with the Comsol multiphysics package.  It uses the Beam Envelope method to find the transmission of individual modes through the tapered fibre structure.  The Parameters for the simulation of a 5:1 taper from a fibre with a 50um core and 125um cladding and a numerical aperture of 0.20 as follows:
 
 Graded-index and step-index fibre were defined by refractive profile. 
 
-lda0 	.635[um] 	Wavelength
-f0 	c_const/lda0 	Frequency
-nClad 	1.4571 		"Refractive index, cladding"
-nCore 	1.4708 		"Refractive index, core"
-aCore 	25[um] 		"Core radius"
-aClad 	62.5[um] 	"Cladding radius"
-zLength 50000[um] 	"Taper length"
-Taper 	0.20		"Taper ratio (eg 1/4)"
-Runout 	10000[um] 	"Runout length"		[not used]
-nClad2 	1.45366 	"Runout clad index"			
-nCore2 	1.4571 		"Runout core index"
-alpha 	.009		"index coefficient"
-tanthe 	aCore/zLength*(1-Taper) 	"Tan theta"
+lda0 	  .635[um] 	    Wavelength
+f0 	    c_const/lda0 	Frequency
+nClad 	1.4571 		    "Refractive index, cladding"
+nCore 	1.4708 		    "Refractive index, core"
+aCore 	25[um] 		    "Core radius"
+aClad 	62.5[um] 	    "Cladding radius"
+zLength 25000[um] 	  "Taper length"
+Taper 	0.20		      "Taper ratio (eg 1/5)"
+r1      aCore/3       "GI centre core radius"
+alpha   0.0097        "profile exp"
+Runout 	10000[um] 	  "Length of fibre after end of taper"
+nClad2 	1.4571 	      "Runout clad index"			
+nCore2 	1.45708 		  "Runout core index"
+delta   0             "gap between taper end and runout fibre"
+NA      sqrt(nCore^2-nClad^2)   "Fibre starting NA"
 
 The parabolic refractive index profile is calculated as:
 
 n(r)=nCore*(1- alpha*(r/aCore)^2)
 
-The step index profile is with alpha=0
+A nine step approximation to the continuous profile is used with constant area 'rings' in order to stay within the Beam Envelope mesh limitations. The geometry is explicitely given in the Component description in the Comsol .mph file.  Each mode (see the Boundary Mode Analysis Step) of the taper is evaluated for transmission by calculating the output from the taper and runout with 1W into the input face of the taper. Perfectly matched boundary conditions are used on all other surfaces. This means power leakage into the cladding may differ from real fibres in that cladding modes intersecting the cladding/air boundary are lost from the calculation.
 
-Perfectly Matched Boundary Conditions are used keep the mesh sizes to a minimum.
+Each propagating mode in the taper has a calculated Effective mode index (propagation constant). This can be converted into an Effective mode NA by the following:
 
-A nine step approximation to the continuous profile is used with constant area 'rings' in order to stay within the Beam Envelope mesh limitations. Each mode of the taper is evaluated for transmission by calculating the output from the taper and runout with 1W into the input face of the taper. Perfectly matched boundary conditions are used on all other surfaces. This means power leakage into the cladding may differ from real fibres in that cladding modes intersecting the cladding/air boundary are lost from the calculation.
+NAeff(m)=sqrt(nCore^2 -EffectiveIndex(m)^2) 
 
 Mesh sizes are typically 40 elements in the z (propagation) direction with 70 transverse elements. 
+
+The step index profile is with alpha=0.
 
