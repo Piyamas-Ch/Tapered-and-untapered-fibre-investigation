@@ -1,12 +1,10 @@
 This Github presents additional results for the manuscript Choochalerm et al., 2021 'Transmission properties of tapered optical fibres: simulations and experimental measurements' (https://doi.org/10.1016/j.yofte.2021.102632) and Choochalerm et al., 2023 'Incoherent light in tapered graded-index fibre: A study of transmission and modal noise' (https://doi.org/10.1016/j.yofte.2022.103140)
 
+The following three folders are explained as following:
+1. COMSOL: This folder contains simulation file of 5:1 graded-index tapered fibre in 3D by COMSOL(can be downloaded from star.herts.ac.uk/exohspec/3dGIStd9level.mph), Parameter of the simulation description (denoted 'ComcolPara.txt'), COMSOL interface examples (denoted 'Consol_UI.jpg' and 'Comsol_mode4_GI_0.20t.pspimage') 
 
-Experimental results of transmission agiants with effective numerical aperture of untapered fibres are presented in the folder Untapered fibre results.
+2. Untapered-fibre-results: This folder contains additional experimental results of untapered fibre. There are 1. Table of specification of test fibres (denote 'tbA-1_untaper-des.JPG'), 2. Table of transmission results of test fibres (denote 'tbA-2_untaper-TvsNAresults.JPG'), and Transmission versus NAeff of test fibre results (denote 'untaper_TvsNA.pdf')
 
-
-Step-index and Graded-index Tapered fibre simulations by COMSOL and Zemax
-
-Each folder contains the parameters file for COMSOL/Zemax, together with a describtion of the parameters. A 
-screenshot from the running programs is included.
-
-*The fibre test setup simulation is in the Zemax folder.
+3. Zemax: This folder contains simulation files of 5:1 graded-index and step-index tapered fibre in 3D by Zemax. Simulation files are in .ZDA and .zmx 
+  - 50_gi5to1_taper_down_grin_20052020.ZDA and 50_gi5to1_taper_down_grin_20052020.zmx are 5:1 graded-index tapered fibre simulation files
+  - si5to1_taper_down201119.ZDA and si5to1_taper_down201119.zmx are 5:1 graded-index tapered fibre simulation files
